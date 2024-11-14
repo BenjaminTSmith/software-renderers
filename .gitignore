@@ -1,0 +1,7 @@
+out/
+cmake-build-*/
+.idea/
+CMakeSettings.json
+compile_commands.json
+.cache/
+.vs/
