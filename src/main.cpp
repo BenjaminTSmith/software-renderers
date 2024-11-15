@@ -6,12 +6,18 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 constexpr int width = 800;
 constexpr int height = 450;
 
-static void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    // TODO(Ben): make viewport an integer scaling of the width and height
+static void framebuffer_size_callback(GLFWwindow* window, int new_width, int new_height) {
+    int width_scale = new_width / width;
+    int height_scale = new_height / height;
+    int scale = std::min(width_scale, height_scale);
+    int x = (new_width - width * scale) / 2;
+    int y = (new_height - height * scale) / 2;
+    glViewport(x, y, width * scale, height * scale);
 }
 
 static std::string read_file(const std::string& filepath) {
@@ -130,12 +136,10 @@ int main() {
     }
 
     Color* framebuffer = new Color[width * height];
-    for (int i = 0; i < width * 3; i++) {
-        framebuffer[i].r = 255;
-    }
-
-    for (int i = 0; i < height; i++) {
-        framebuffer[i * width + 32].g = 255;
+    for (int i = 0; i < width * height; i++) {
+        framebuffer[i].r = i % width / (float)width * 255; 
+        framebuffer[i].g = i / (float)width / height * 255; 
+        framebuffer[i].b = 0; 
     }
     unsigned int texture;
     glActiveTexture(GL_TEXTURE0);
