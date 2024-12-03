@@ -8,16 +8,61 @@
 #include <fstream>
 #include <algorithm>
 
-constexpr int width = 800;
-constexpr int height = 450;
+#include "render.h"
+#include "raytracer.h"
+
+constexpr double pi = 3.141592653589793238462643383;
+static double radians(double degrees) {
+    return degrees * (pi / 180.0);
+}
 
 static void framebuffer_size_callback(GLFWwindow* window, int new_width, int new_height) {
-    int width_scale = new_width / width;
-    int height_scale = new_height / height;
-    int scale = std::min(width_scale, height_scale);
+    // NOTE(Ben): not sure if we should do integral or decimal scaling. leave decimal for now.
+    // just float to int below to change back
+    float width_scale = (float)new_width / width;
+    float height_scale = (float)new_height / height;
+    float scale = std::min(width_scale, height_scale);
     int x = (new_width - width * scale) / 2;
     int y = (new_height - height * scale) / 2;
     glViewport(x, y, width * scale, height * scale);
+}
+
+static bool first_mouse = true;
+static double last_x = 400;
+static double last_y = 225;
+static double yaw = 90;
+static double pitch = 0;
+static void cursor_pos_callback(GLFWwindow* window, double x, double y) {
+    if (first_mouse) {
+        last_x = x;
+        last_y = y;
+        first_mouse = false;
+    }
+  
+    double xoffset = x - last_x;
+    double yoffset = y - last_y; 
+    last_x = x;
+    last_y = y;
+
+    double sensitivity = 0.1;
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+
+    yaw += xoffset;
+    pitch += yoffset;
+
+    if (pitch > 89.0f) {
+        pitch = 89.0f;
+    }
+    if (pitch < -89.0f) {
+        pitch = -89.0f;
+    }
+
+    camera_direction.x = cos(radians(yaw)) * cos(radians(pitch));
+    camera_direction.y = sin(radians(pitch));
+    camera_direction.z = sin(radians(yaw)) * cos(radians(pitch));
+    camera_direction = normalize(camera_direction);
+    right = cross(camera_direction, up);
 }
 
 static std::string read_file(const std::string& filepath) {
@@ -34,14 +79,10 @@ static std::string read_file(const std::string& filepath) {
     return file;
 }
 
-struct Color {
-    unsigned char r;
-    unsigned char g;
-    unsigned char b;
-
-    Color() : r(0), g(0), b(0) {}
-    Color(unsigned char r, unsigned char g, unsigned char b) : r(r), g(g), b(b) {}
-};
+static inline void update_framebuffer(const Color framebuffer[]) {
+    // TODO(Ben): possibly switch to two textures and see if performance is better
+    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, framebuffer);
+}
 
 int main() {
     GLFWwindow* window;
@@ -54,7 +95,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    window = glfwCreateWindow(width, height, "Software Renderer", NULL, NULL);
+    window = glfwCreateWindow(width * 2, height * 2, "Software Renderer", NULL, NULL);
     if (!window) {
         std::cout << "Failed to create window" << std::endl;
         glfwTerminate();
@@ -62,14 +103,16 @@ int main() {
     }
 
     glfwMakeContextCurrent(window);
-
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return 0;
     }
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    glViewport(0, 0, width, height);
+    glViewport(0, 0, width * 2, height * 2);
+
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwSetCursorPosCallback(window, cursor_pos_callback);
 
     unsigned int vao;
     glGenVertexArrays(1, &vao);
@@ -105,7 +148,7 @@ int main() {
     glShaderSource(vertex_shader, 1, &c_vertex_source, nullptr);
     glCompileShader(vertex_shader);
 
-    int  success;
+    int success;
     char info_log[512];
     glGetShaderiv(vertex_shader, GL_COMPILE_STATUS, &success);
     if (!success) {
@@ -136,11 +179,6 @@ int main() {
     }
 
     Color* framebuffer = new Color[width * height];
-    for (int i = 0; i < width * height; i++) {
-        framebuffer[i].r = i % width / (float)width * 255; 
-        framebuffer[i].g = i / (float)width / height * 255; 
-        framebuffer[i].b = 0; 
-    }
     unsigned int texture;
     glActiveTexture(GL_TEXTURE0);
     glGenTextures(1, &texture);
@@ -154,13 +192,33 @@ int main() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     glClearColor(0, 0, 0, 0);
+
+    Object scene[2];
+    scene[0] = create_sphere(Vec3(0, 0, -1), 0.5);
+    scene[1] = create_sphere(Vec3(0, -100.5, -1), 100);
+
     while (!glfwWindowShouldClose(window)) {
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
             glfwSetWindowShouldClose(window, true);
+        } if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+            camera = camera - camera_direction;
+        } if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+            camera = camera + right;
+        } if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+            camera = camera + camera_direction;
+        } if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+            camera = camera - right;
+        } if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+            camera.y += 5;
+        } if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+            camera.y -= 5;
         }
+        
         glClear(GL_COLOR_BUFFER_BIT);
-
-        // TODO(Ben): Possibly change to an index buffer if need be
+        // render here:
+        render(framebuffer, scene, 2);
+        update_framebuffer(framebuffer);
+        // TODO(Ben): Possibly change to an index buffer if need be.
         glDrawArrays(GL_TRIANGLES, 0, 6);
 
         glfwSwapBuffers(window);
