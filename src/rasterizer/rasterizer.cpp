@@ -26,10 +26,11 @@ void sweep_triangle(Color* framebuffer, Vec3 v0, Vec3 v1, Vec3 v2, Color color) 
     bboxmin.y = std::min(v0.y, std::min(v1.y, v2.y));
     bboxmax.x = std::max(v0.x, std::max(v1.x, v2.x));
     bboxmax.y = std::max(v0.y, std::max(v1.y, v2.y));
-    bboxmin.x = std::min(width - 1.0, bboxmin.x);
-    bboxmin.y = std::min(height - 1.0, bboxmin.y);
-    bboxmax.x = std::max(0.0, bboxmax.x);
-    bboxmax.y = std::max(0.0, bboxmax.y);
+
+    bboxmin.x = std::max(0.0, std::min(width - 1.0, bboxmin.x));
+    bboxmin.y = std::max(0.0, std::min(height - 1.0, bboxmin.y));
+    bboxmax.x = std::min(width - 1.0, std::max(0.0, bboxmax.x));
+    bboxmax.y = std::min(height - 1.0, std::max(0.0, bboxmax.y));
     
     for (int x = bboxmin.x; x < bboxmax.x; x++) {
         for (int y = bboxmin.y; y < bboxmax.y; y++) {
@@ -38,11 +39,9 @@ void sweep_triangle(Color* framebuffer, Vec3 v0, Vec3 v1, Vec3 v2, Color color) 
                 continue;
             }
             double z = v0.z * barycentric_coords.x + v1.z * barycentric_coords.y + v2.z * barycentric_coords.z;
-            if (y * width + x >= 0 && y * width + x < width * height) {
-                if (z > z_buffer[y * width + x]) {
-                    z_buffer[y * width + x] = z;
-                    framebuffer[y * width + x] = color;
-                }
+            if (z > z_buffer[y * width + x]) {
+                z_buffer[y * width + x] = z;
+                framebuffer[y * width + x] = color;
             }
         }
     }
@@ -72,7 +71,7 @@ void render(Color* framebuffer) {
         Vec3 triangle[3];
         for (int j = 0; j < face.size(); j++) {
             Vec3 v = mesh.vertices[face[j]];
-            double c = -1000.0;
+            double c = -100.0;
             double w = 1.0 - v.z / c;
             v.x /= w;
             v.y /= w;

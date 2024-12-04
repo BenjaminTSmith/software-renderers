@@ -8,5 +8,6 @@ OpenGL 3.3 drivers for your graphics card, but it was released in 2010, so you p
 To setup run the following git commands and use CMake with any compatible IDE and/or from the command line.
 ```bash
 git clone https://github.com/BenjaminTSmith/software-renderers.git
+cd software-renderers
 git submodule update --init --recursive
 ```
