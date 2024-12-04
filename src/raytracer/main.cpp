@@ -199,8 +199,10 @@ int main() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     glClearColor(0, 0, 0, 0);
-
-    Object scene[2];
+    const int max_objects = 100;
+    int selected_sphere_index = -1; //if nothing is selected
+    Object scene[max_objects];
+    int object_count = 2;
     scene[0] = create_sphere(Vec3(0, 0, -1), 0.5, Color(200, 10, 10));
     scene[1] = create_sphere(Vec3(0, -100.5, -1), 100, Color(10, 10, 210));
 
@@ -213,6 +215,9 @@ int main() {
     // Setup Platform/Renderer backends
     ImGui_ImplGlfw_InitForOpenGL(window, true); // Second param install_callback=true will install GLFW callbacks and chain to existing ones.
     ImGui_ImplOpenGL3_Init();   
+    float position[3] = {1.0f, 0.0f, -1.0f};
+    float radius = 0.5f;
+    float color[3] = {1.0f, 1.0f, 1.0f}; 
     //
 
     while (!glfwWindowShouldClose(window)) {
@@ -243,11 +248,98 @@ int main() {
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-        ImGui::ShowDemoWindow(); // Show demo window! :)
+        {
+            ImGui::Begin("Scene Controls");
+
+            ImGui::InputFloat3("Position", position);
+            ImGui::SliderFloat("Radius", &radius, 0.1f, 10.0f);
+            ImGui::ColorEdit3("Color", color);
+
+            if (ImGui::Button("Add Sphere")) {
+                if (object_count < max_objects) {
+                    // Create a new sphere
+                    Vec3 pos = Vec3(position[0], position[1], position[2]);
+                    Color col = Color(
+                        static_cast<unsigned char>(color[0] * 255),
+                        static_cast<unsigned char>(color[1] * 255),
+                        static_cast<unsigned char>(color[2] * 255)
+                    );
+                    scene[object_count++] = create_sphere(pos, radius, col);
+                } else {
+                    ImGui::Text("Maximum objs");
+                }
+            }
+            ImGui::Text("Number of spheres: %d", object_count);
+            ImGui::Separator();
+            ImGui::Text("Spheres in Scene:");
+
+            // Display the list of spheres
+            for (int i = 0; i < object_count; ++i) {
+                char label[32];
+                snprintf(label, sizeof(label), "Sphere %d", i);
+                if (ImGui::Selectable(label, selected_sphere_index == i)) {
+                    selected_sphere_index = i; // Update selected sphere index
+                }
+            }
+
+            // If a sphere is selected, display its properties for editing
+            if (selected_sphere_index >= 0 && selected_sphere_index < object_count) {
+                ImGui::Separator();
+                ImGui::Text("Edit Sphere %d", selected_sphere_index);
+
+                // Reference to the selected sphere
+                Object& selected_sphere = scene[selected_sphere_index];
+
+                // Edit Position
+                float edit_position[3] = {
+                    static_cast<float>(selected_sphere.center.x),
+                    static_cast<float>(selected_sphere.center.y),
+                    static_cast<float>(selected_sphere.center.z)
+                };
+                if (ImGui::InputFloat3("Edit Position", edit_position)) {
+                    selected_sphere.center.x = edit_position[0];
+                    selected_sphere.center.y = edit_position[1];
+                    selected_sphere.center.z = edit_position[2];
+                }
+
+                // Edit Radius
+                float edit_radius = selected_sphere.radius;
+                if (ImGui::SliderFloat("Edit Radius", &edit_radius, 0.1f, 10.0f)) {
+                    selected_sphere.radius = edit_radius;
+                }
+
+                // Edit Color
+                float edit_color[3] = {
+                    static_cast<float>(selected_sphere.color.x),
+                    static_cast<float>(selected_sphere.color.y),
+                    static_cast<float>(selected_sphere.color.z)
+                };
+                if (ImGui::ColorEdit3("Edit Color", edit_color)) {
+                    selected_sphere.color.x = edit_color[0];
+                    selected_sphere.color.y = edit_color[1];
+                    selected_sphere.color.z = edit_color[2];
+                }
+
+
+                // Remove sphere button
+                if (ImGui::Button("Remove Sphere")) {
+                    // Remove the sphere by shifting the array
+                    for (int i = selected_sphere_index; i < object_count - 1; ++i) {
+                        scene[i] = scene[i + 1];
+                    }
+                    --object_count;
+                    selected_sphere_index = -1; // Reset selection
+                }
+            }
+
+            ImGui::End();
+        }
+
+        
         
         glClear(GL_COLOR_BUFFER_BIT);
         // render here:
-        render(framebuffer, scene, 2);
+        render(framebuffer, scene, object_count);
         update_framebuffer(framebuffer);
         // TODO(Ben): Possibly change to an index buffer if need be.
         glDrawArrays(GL_TRIANGLES, 0, 6);
