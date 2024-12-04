@@ -16,6 +16,6 @@ struct Mesh {
 void render(Color* framebuffer);
 std::vector<std::string> split(const std::string& line, char delimiter=' ');
 Mesh load_mesh(const std::string& mesh_file);
-void sweep_triangle(Color* framebuffer, Vec2 v0, Vec2 v1, Vec2 v2, Color color);
+void sweep_triangle(Color* framebuffer, Vec3 v0, Vec3 v1, Vec3 v2, Color color);
 
 #endif // !RASTERIZER_H

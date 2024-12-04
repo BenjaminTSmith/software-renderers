@@ -1,3 +1,4 @@
+#include "render.h"
 #define GLAD_GL_IMPLEMENTATION
 #include <glad/glad.h>
 #define GLFW_INCLUDE_NONE
@@ -147,9 +148,9 @@ int main() {
 
     glClearColor(0, 0, 0, 0);
 
-    /*Object scene[2];
-    scene[0] = create_sphere(Vec3(0, 0, -1), 0.5);
-    scene[1] = create_sphere(Vec3(0, -100.5, -1), 100);*/
+    for (int i = 0; i < width * height; i++) {
+        framebuffer[i] = Color(0, 0, 0);
+    }
 
     while (!glfwWindowShouldClose(window)) {
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {

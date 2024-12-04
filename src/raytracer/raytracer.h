@@ -39,6 +39,7 @@ struct HitRecord {
     Vec3 normal;
     double t;
     bool front_face;
+    Vec3 color;
 };
 
 // Raytracing code for now
@@ -48,6 +49,7 @@ struct Object {
     ObjectType object_type;
     Vec3 center;
     double radius;
+    Vec3 color;
 
     bool hit(const Ray& ray, double tmin, double tmax, HitRecord& hit_record) const {
         switch (object_type) {
@@ -60,11 +62,14 @@ struct Object {
     }
 };
 
-static Object create_sphere(Vec3 center, double radius) {
+static Object create_sphere(Vec3 center, double radius, Color color) {
     Object object;
     object.object_type = Sphere;
     object.center = center;
     object.radius = radius;
+    object.color.x = color.r / 255.0;
+    object.color.y = color.g / 255.0;
+    object.color.z = color.b / 255.0;
     return object;
 }
 

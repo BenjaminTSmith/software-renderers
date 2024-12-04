@@ -11,6 +11,10 @@
 #include "render.h"
 #include "raytracer.h"
 
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 constexpr double pi = 3.141592653589793238462643383;
 static double radians(double degrees) {
     return degrees * (pi / 180.0);
@@ -32,7 +36,11 @@ static double last_x = 400;
 static double last_y = 225;
 static double yaw = 90;
 static double pitch = 0;
+bool cursor_enabled = true;
 static void cursor_pos_callback(GLFWwindow* window, double x, double y) {
+    if (cursor_enabled) {
+        return;
+    }
     if (first_mouse) {
         last_x = x;
         last_y = y;
@@ -111,7 +119,6 @@ int main() {
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glViewport(0, 0, width * 2, height * 2);
 
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     glfwSetCursorPosCallback(window, cursor_pos_callback);
 
     unsigned int vao;
@@ -194,25 +201,49 @@ int main() {
     glClearColor(0, 0, 0, 0);
 
     Object scene[2];
-    scene[0] = create_sphere(Vec3(0, 0, -1), 0.5);
-    scene[1] = create_sphere(Vec3(0, -100.5, -1), 100);
+    scene[0] = create_sphere(Vec3(0, 0, -1), 0.5, Color(200, 10, 10));
+    scene[1] = create_sphere(Vec3(0, -100.5, -1), 100, Color(10, 10, 210));
+
+    // IMGUI STARTS HERE
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+
+    // Setup Platform/Renderer backends
+    ImGui_ImplGlfw_InitForOpenGL(window, true); // Second param install_callback=true will install GLFW callbacks and chain to existing ones.
+    ImGui_ImplOpenGL3_Init();   
+    //
 
     while (!glfwWindowShouldClose(window)) {
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
-            glfwSetWindowShouldClose(window, true);
-        } if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-            camera = camera - camera_direction;
-        } if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-            camera = camera + right;
-        } if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-            camera = camera + camera_direction;
-        } if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-            camera = camera - right;
-        } if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
-            camera.y += 5;
-        } if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
-            camera.y -= 5;
+            if (cursor_enabled) {
+                glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+            } else {
+                glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+            }
+            cursor_enabled = !cursor_enabled;
         }
+        if (!cursor_enabled) {
+            if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+                camera = camera - camera_direction;
+            } if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+                camera = camera + right;
+            } if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+                camera = camera + camera_direction;
+            } if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+                camera = camera - right;
+            } if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+                camera.y += 5;
+            } if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+                camera.y -= 5;
+            }
+        }
+
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+        ImGui::ShowDemoWindow(); // Show demo window! :)
         
         glClear(GL_COLOR_BUFFER_BIT);
         // render here:
@@ -221,6 +252,10 @@ int main() {
         // TODO(Ben): Possibly change to an index buffer if need be.
         glDrawArrays(GL_TRIANGLES, 0, 6);
 
+        // IMGUI IN RENDER LOOP HERE
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        //
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
@@ -230,5 +265,10 @@ int main() {
     glfwTerminate();
 
     delete[] framebuffer;
+
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
+
     return 0;
 }

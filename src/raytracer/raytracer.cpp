@@ -5,7 +5,7 @@
 #include <limits>
 
 Vec3 camera(0, 0, 3);
-Vec3 camera_direction = normalize(Vec3(-0, 0, 1));
+Vec3 camera_direction = normalize(Vec3(0, 0, 1));
 Vec3 up(0, 1, 0);
 Vec3 right = cross(camera_direction, up);
 double focal_length = 3; // this feels pretty good for now. can tweak if needed
@@ -15,7 +15,7 @@ void render(Color framebuffer[], Object scene[], int object_count) {
     double viewport_width = viewport_height * aspect_ratio;
 
     // from https://raytracing.github.io/
-    // For the raytracer we use right handed coordinates. Positive x is to the left,
+    // For the raytracer we use right handed coordinates. Positive x is to the right,
     // positive y is up, positive z is backwards
 
     // camera basis vectors
@@ -45,7 +45,7 @@ void render(Color framebuffer[], Object scene[], int object_count) {
             Vec3 unit_direction = normalize(ray_direction);
             double a = 0.5 * (unit_direction.y + 1.0);
 
-            int max_bounces = 3;
+            int max_bounces = 15;
             Ray ray(camera, ray_direction);
             Vec3 color(((1 - a) + a * 0.5) * 255, ((1 - a) + a * 0.7) * 255, ((1 - a) + a * 1.0) * 255);
             HitRecord hit_record;
@@ -56,7 +56,7 @@ void render(Color framebuffer[], Object scene[], int object_count) {
                     direction = -1 * direction;
                 }*/
                 ray = Ray(hit_record.point, direction);
-                color = 0.5 * color;
+                color = hit_record.color * color;
                 max_bounces--;
             }
             color_total = color_total + color;
@@ -74,6 +74,7 @@ bool hit_scene(const Ray& ray, Object scene[], int object_count, HitRecord& hit_
         if (scene[j].hit(ray, 0.001, closest, hit_record)) {
             hit = true;
             closest = hit_record.t;
+            hit_record.color = scene[j].color;
         }
     }
     return hit;
