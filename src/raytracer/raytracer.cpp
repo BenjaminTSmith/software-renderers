@@ -9,6 +9,7 @@ Vec3 camera_direction = normalize(Vec3(0, 0, 1));
 Vec3 up(0, 1, 0);
 Vec3 right = cross(camera_direction, up);
 double focal_length = 3; // this feels pretty good for now. can tweak if needed
+const int samples_per_pixel = 1;
 
 void render(Color framebuffer[], Object scene[], int object_count) {
     double viewport_height = 2.0;
@@ -32,8 +33,6 @@ void render(Color framebuffer[], Object scene[], int object_count) {
     Vec3 viewport_origin = camera - (focal_length * w) - u / 2 - v / 2;
     Vec3 pixel_origin = viewport_origin + 0.5 * (du + dv);
 
-    constexpr int samples_per_pixel = 2;
-
     for (int i = 0; i < width * height; i++) {
         Vec3 color_total(0, 0, 0);
         for (int j = 0; j < samples_per_pixel; j++) {
@@ -45,7 +44,7 @@ void render(Color framebuffer[], Object scene[], int object_count) {
             Vec3 unit_direction = normalize(ray_direction);
             double a = 0.5 * (unit_direction.y + 1.0);
 
-            int max_bounces = 15;
+            int max_bounces = 5;
             Ray ray(camera, ray_direction);
             Vec3 color(((1 - a) + a * 0.5) * 255, ((1 - a) + a * 0.7) * 255, ((1 - a) + a * 1.0) * 255);
             HitRecord hit_record;
