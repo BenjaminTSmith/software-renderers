@@ -71,6 +71,7 @@ void render(Color* framebuffer, const Camera& camera, Model models[], int model_
 
     for (int i = 0; i < model_count; i++) {
         Model model = models[i];
+        
         Mat4 model_mat = translate(model.position);
 
         for (int i = 0; i < mesh.faces.size(); i++) {
