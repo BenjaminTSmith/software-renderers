@@ -39,7 +39,7 @@ void sweep_triangle(Color* framebuffer, Vec3 v0, Vec3 v1, Vec3 v2, Color color) 
                 continue;
             }
             double z = v0.z * barycentric_coords.x + v1.z * barycentric_coords.y + v2.z * barycentric_coords.z;
-            if (z > z_buffer[y * width + x]) {
+            if (z < z_buffer[y * width + x]) {
                 z_buffer[y * width + x] = z;
                 framebuffer[y * width + x] = color;
             }
@@ -47,23 +47,39 @@ void sweep_triangle(Color* framebuffer, Vec3 v0, Vec3 v1, Vec3 v2, Color color) 
     }
 }
 
-void render(Color* framebuffer) {
+void render(Color* framebuffer, const Camera& camera) {
     // NOTE(Ben): weird white artifacts/pixels near mesh edges
     auto mesh = load_mesh("head.obj");
     for (int i = 0; i < width * height; i++) {
-        z_buffer[i] = 0;
+        z_buffer[i] = INFINITY;
+        framebuffer[i] = Color(0, 0, 0);
     }
     double tangent = tan(45.0 / 2.0 * (3.1415926535 / 180));
     double top = 0.1 * tangent;
     double right = top * aspect_ratio;
 
-    // TODO(Ben): Don't need this for right now
-    Mat4 projection_matrix;
-    projection_matrix.m00 = 0.1 / right;
-    projection_matrix.m11 = 0.1 / top;
-    projection_matrix.m22 = (0.1 - 1000) / (1000 - 0.1);
-    projection_matrix.m23 = - (2 * 1000 * 0.1) / (1000 - 0.1);
-    projection_matrix.m32 = -1;
+    Mat4 projection;
+    projection.m00 = 0.1 / right;
+    projection.m11 = 0.1 / top;
+    projection.m22 = (0.1 - 1000) / (1000 - 0.1);
+    projection.m23 = - (2 * 1000 * 0.1) / (1000 - 0.1);
+    projection.m32 = -1;
+
+    Mat4 view;
+    view.m00 = 1;
+    view.m03 = -camera.position.x;
+    view.m11 = 1;
+    view.m13 = -camera.position.y;
+    view.m22 = 1;
+    view.m23 = -camera.position.z;
+    view.m33 = 1;
+
+    Mat4 model;
+    model.m00 = 1;
+    model.m03 = 0.5;
+    model.m11 = 1;
+    model.m22 = 1;
+    model.m33 = 1;
 
     for (int i = 0; i < mesh.faces.size(); i++) {
         const std::vector<int>& face = mesh.faces[i];
@@ -71,14 +87,11 @@ void render(Color* framebuffer) {
         Vec3 triangle[3];
         for (int j = 0; j < face.size(); j++) {
             Vec3 v = mesh.vertices[face[j]];
-            double c = -100.0;
-            double w = 1.0 - v.z / c;
-            v.x /= w;
-            v.y /= w;
-            v.z /= w;
-            int x = (v.x + 1.0) * width  / 2.0;
-            int y = (-v.y + 1.0) * height / 2.0;
-            screen_coords[j] = Vec3(x, y, v.z);
+            Vec4 result = projection * (view * (model * Vec4(v.x, v.y, v.z, 1)));
+            Vec3 v1 = Vec3(result.x / result.w, result.y / result.w, result.z / result.w);
+            int x = (v1.x + 1.0) * width  / 2.0;
+            int y = (-v1.y + 1.0) * height / 2.0;
+            screen_coords[j] = Vec3(x, y, v1.z);
             triangle[j] = v;
         }
         Vec3 n = normalize(cross(triangle[2] - triangle[0], triangle[1] - triangle[0]));
@@ -142,4 +155,10 @@ Mesh load_mesh(const std::string& mesh_file) {
         }
     }
     return mesh;
+}
+
+Mat4 look_at(Vec3 position, Vec3 target, Vec3 up) {
+    Vec3 direction = normalize(position - target);
+    Vec3 right = normalize(cross(up, direction));
+    Mat4 change_of_basis;
 }

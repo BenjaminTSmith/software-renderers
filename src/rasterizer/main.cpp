@@ -22,6 +22,49 @@ static void framebuffer_size_callback(GLFWwindow* window, int new_width, int new
     glViewport(x, y, width * scale, height * scale);
 }
 
+Camera camera;
+static bool first_mouse = true;
+static double last_x = 400;
+static double last_y = 225;
+static double yaw = 90;
+static double pitch = 0;
+bool cursor_enabled = true;
+static void cursor_pos_callback(GLFWwindow* window, double x, double y) {
+    if (cursor_enabled) {
+        return;
+    }
+    if (first_mouse) {
+        last_x = x;
+        last_y = y;
+        first_mouse = false;
+    }
+  
+    double xoffset = x - last_x;
+    double yoffset = y - last_y; 
+    last_x = x;
+    last_y = y;
+
+    double sensitivity = 0.1;
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+
+    yaw += xoffset;
+    pitch += yoffset;
+
+    if (pitch > 89.0f) {
+        pitch = 89.0f;
+    }
+    if (pitch < -89.0f) {
+        pitch = -89.0f;
+    }
+
+    /*camera_direction.x = cos(radians(yaw)) * cos(radians(pitch));
+    camera_direction.y = sin(radians(pitch));
+    camera_direction.z = sin(radians(yaw)) * cos(radians(pitch));
+    camera_direction = normalize(camera_direction);
+    right = cross(camera_direction, up);*/
+}
+
 static std::string read_file(const std::string& filepath) {
     std::ifstream filestream(filepath);
     if (!filestream.is_open()) {
@@ -152,13 +195,26 @@ int main() {
         framebuffer[i] = Color(0, 0, 0);
     }
 
+    camera.position = Vec3(0, 0, 3);
     while (!glfwWindowShouldClose(window)) {
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
             glfwSetWindowShouldClose(window, true);
+        } if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+            camera.position.z -= 0.1;
+        } if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+            camera.position.x -= 0.1;
+        } if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+            camera.position.z += 0.1;
+        } if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+            camera.position.x += 0.1;
+        } if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+            camera.position.y += 0.1;
+        } if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+            camera.position.y -= 0.1;
         }
         glClear(GL_COLOR_BUFFER_BIT);
         // render here:
-        render(framebuffer);
+        render(framebuffer, camera);
         update_framebuffer(framebuffer);
         // TODO(Ben): Possibly change to an index buffer if need be.
         glDrawArrays(GL_TRIANGLES, 0, 6);
