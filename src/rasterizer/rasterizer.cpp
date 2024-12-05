@@ -50,7 +50,6 @@ void sweep_triangle(Color* framebuffer, Vec3 v0, Vec3 v1, Vec3 v2, Color color) 
 void render(Color* framebuffer, const Camera& camera, Model models[], int model_count) {
     // NOTE(Ben): weird white artifacts/pixels near mesh edges
     // I dont think so anymore - Justin
-    Mesh mesh = load_mesh("head.obj");
     for (int i = 0; i < width * height; i++) {
         z_buffer[i] = INFINITY;
         framebuffer[i] = Color(0, 0, 0);
@@ -71,6 +70,7 @@ void render(Color* framebuffer, const Camera& camera, Model models[], int model_
 
     for (int i = 0; i < model_count; i++) {
         Model model = models[i];
+        Mesh mesh = model.mesh;
         Mat4 model_mat = translate(model.position);
 
         for (int i = 0; i < mesh.faces.size(); i++) {
@@ -153,6 +153,7 @@ Mesh load_mesh(const std::string& mesh_file) {
 Mat4 look_at(Vec3 position, Vec3 target, Vec3 up) {
     Vec3 direction = normalize(position - target);
     Vec3 right = normalize(cross(up, direction));
+    up = cross(direction, right);
     Mat4 change_of_basis;
     change_of_basis.m00 = right.x;
     change_of_basis.m01 = right.y;
@@ -182,7 +183,7 @@ Mat4 translate(Vec3 translation) {
     result.m22 = 1;
     result.m33 = 1;
     result.m03 = translation.x;
-    result.m13 = translation.x;
-    result.m23 = translation.x;
+    result.m13 = translation.y;
+    result.m23 = translation.z;
     return result;
 }

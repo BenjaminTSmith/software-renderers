@@ -47,7 +47,7 @@ static void cursor_pos_callback(GLFWwindow* window, double x, double y) {
         last_y = y;
         first_mouse = false;
     }
-  
+
     double xoffset = x - last_x;
     double yoffset = y - last_y; 
     last_x = x;
@@ -348,12 +348,12 @@ int main() {
             ImGui::End();
         }
 
-        
-        
+
+
         glClear(GL_COLOR_BUFFER_BIT);
         // render here:
         if (!render_pause) {
-        render(framebuffer, scene, object_count);
+            render(framebuffer, scene, object_count);
         }
         update_framebuffer(framebuffer);
         // TODO(Ben): Possibly change to an index buffer if need be.

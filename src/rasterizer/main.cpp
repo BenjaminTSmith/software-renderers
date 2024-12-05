@@ -49,7 +49,7 @@ static void cursor_pos_callback(GLFWwindow* window, double x, double y) {
     }
 
     double xoffset = x - last_x;
-    double yoffset = y - last_y;
+    double yoffset = last_y - y;
     last_x = x;
     last_y = y;
 
@@ -71,7 +71,6 @@ static void cursor_pos_callback(GLFWwindow* window, double x, double y) {
     camera_direction.x = cos(radians(yaw)) * cos(radians(pitch));
     camera_direction.y = sin(radians(pitch));
     camera_direction.z = sin(radians(yaw)) * cos(radians(pitch));
-    camera_direction = normalize(camera_direction);
     camera.direction = normalize(camera_direction);
 }
 
@@ -128,6 +127,8 @@ int main() {
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glViewport(0, 0, width * 2, height * 2);
 
+    // glfwSetCursorPosCallback(window, cursor_pos_callback);
+
     unsigned int vao;
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
@@ -136,13 +137,13 @@ int main() {
     // NOTE(Ben): texture coordinates are flipped so that the first index into the framebuffer is
     // the top left corner.
     float vertices[] = {
-            -1.f, 1.f, 0.f, 0.f, // top left
-            1.f, 1.f, 1.f, 0.f, // top right
-            -1.f, -1.f, 0.f, 1.f, // bottom left
+        -1.f, 1.f, 0.f, 0.f, // top left
+        1.f, 1.f, 1.f, 0.f, // top right
+        -1.f, -1.f, 0.f, 1.f, // bottom left
 
-            1.f, 1.f, 1.f, 0.f, // top right
-            1.f, -1.f, 1.f, 1.f, // bottom right
-            -1.f, -1.f, 0.f, 1.f // bottom left
+        1.f, 1.f, 1.f, 0.f, // top right
+        1.f, -1.f, 1.f, 1.f, // bottom right
+        -1.f, -1.f, 0.f, 1.f // bottom left
     };
 
     unsigned int vbo;
@@ -223,11 +224,15 @@ int main() {
     models[model_count].position = Vec3(0.5, 0, 0);
     model_count++;
 
-    camera.position = Vec3(0, 0, 3);
+    camera.position = Vec3(0, 0, 10);
     camera.direction = Vec3(0, 0, -1);
+
+    // glfwSet
+
     while (!glfwWindowShouldClose(window)) {
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
             glfwSetWindowShouldClose(window, true);
+            // cursor_enabled = !cursor_enabled;
         } if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
             camera.position.z -= 0.1;
         } if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
@@ -280,9 +285,9 @@ int main() {
 
                 Model& selected_model = models[selected_model_index];
                 float position[3] = {
-                        static_cast<float>(selected_model.position.x),
-                        static_cast<float>(selected_model.position.y),
-                        static_cast<float>(selected_model.position.z)
+                    static_cast<float>(selected_model.position.x),
+                    static_cast<float>(selected_model.position.y),
+                    static_cast<float>(selected_model.position.z)
                 };
                 if (ImGui::InputFloat3("Edit Position", position)) {
                     selected_model.position.x = position[0];
@@ -331,3 +336,4 @@ int main() {
 
     delete[] framebuffer;
     return 0;
+}
