@@ -31,7 +31,7 @@ void sweep_triangle(Color* framebuffer, Vec3 v0, Vec3 v1, Vec3 v2, Color color) 
     bboxmin.y = std::max(0.0, std::min(height - 1.0, bboxmin.y));
     bboxmax.x = std::min(width - 1.0, std::max(0.0, bboxmax.x));
     bboxmax.y = std::min(height - 1.0, std::max(0.0, bboxmax.y));
-    
+
     for (int x = bboxmin.x; x < bboxmax.x; x++) {
         for (int y = bboxmin.y; y < bboxmax.y; y++) {
             Vec3 barycentric_coords = barycentric(v0, v1, v2, Vec3(x, y, 0));
@@ -47,9 +47,10 @@ void sweep_triangle(Color* framebuffer, Vec3 v0, Vec3 v1, Vec3 v2, Color color) 
     }
 }
 
-void render(Color* framebuffer, const Camera& camera) {
+void render(Color* framebuffer, const Camera& camera, Model models[], int model_count) {
     // NOTE(Ben): weird white artifacts/pixels near mesh edges
-    auto mesh = load_mesh("head.obj");
+    // I dont think so anymore - Justin
+    Mesh mesh = load_mesh("head.obj");
     for (int i = 0; i < width * height; i++) {
         z_buffer[i] = INFINITY;
         framebuffer[i] = Color(0, 0, 0);
@@ -58,6 +59,7 @@ void render(Color* framebuffer, const Camera& camera) {
     double top = 0.1 * tangent;
     double right = top * aspect_ratio;
 
+    // Justin todo: probably move this out
     Mat4 projection;
     projection.m00 = 0.1 / right;
     projection.m11 = 0.1 / top;
@@ -65,40 +67,31 @@ void render(Color* framebuffer, const Camera& camera) {
     projection.m23 = - (2 * 1000 * 0.1) / (1000 - 0.1);
     projection.m32 = -1;
 
-    Mat4 view;
-    view.m00 = 1;
-    view.m03 = -camera.position.x;
-    view.m11 = 1;
-    view.m13 = -camera.position.y;
-    view.m22 = 1;
-    view.m23 = -camera.position.z;
-    view.m33 = 1;
+    Mat4 view = look_at(camera.position, camera.position + camera.direction, Vec3(0, 1, 0));
 
-    Mat4 model;
-    model.m00 = 1;
-    model.m03 = 0.5;
-    model.m11 = 1;
-    model.m22 = 1;
-    model.m33 = 1;
+    for (int i = 0; i < model_count; i++) {
+        Model model = models[i];
+        Mat4 model_mat = translate(model.position);
 
-    for (int i = 0; i < mesh.faces.size(); i++) {
-        const std::vector<int>& face = mesh.faces[i];
-        Vec3 screen_coords[3];
-        Vec3 triangle[3];
-        for (int j = 0; j < face.size(); j++) {
-            Vec3 v = mesh.vertices[face[j]];
-            Vec4 result = projection * (view * (model * Vec4(v.x, v.y, v.z, 1)));
-            Vec3 v1 = Vec3(result.x / result.w, result.y / result.w, result.z / result.w);
-            int x = (v1.x + 1.0) * width  / 2.0;
-            int y = (-v1.y + 1.0) * height / 2.0;
-            screen_coords[j] = Vec3(x, y, v1.z);
-            triangle[j] = v;
-        }
-        Vec3 n = normalize(cross(triangle[2] - triangle[0], triangle[1] - triangle[0]));
-        double light = dot(n, Vec3(0, 0, -1));
-        if (light > 0) {
-            sweep_triangle(framebuffer, screen_coords[0], screen_coords[1], screen_coords[2],
-                           Color(light * 255, light * 255, light * 255));
+        for (int i = 0; i < mesh.faces.size(); i++) {
+            const std::vector<int>& face = mesh.faces[i];
+            Vec3 screen_coords[3];
+            Vec3 triangle[3];
+            for (int j = 0; j < face.size(); j++) {
+                Vec3 v = mesh.vertices[face[j]];
+                Vec4 result = projection * (view * (model_mat * Vec4(v.x, v.y, v.z, 1)));
+                Vec3 v1 = Vec3(result.x / result.w, result.y / result.w, result.z / result.w);
+                int x = (v1.x + 1.0) * width  / 2.0;
+                int y = (-v1.y + 1.0) * height / 2.0;
+                screen_coords[j] = Vec3(x, y, v1.z);
+                triangle[j] = v;
+            }
+            Vec3 n = normalize(cross(triangle[2] - triangle[0], triangle[1] - triangle[0]));
+            double light = dot(n, Vec3(0, 0, -1));
+            if (light > 0) {
+                sweep_triangle(framebuffer, screen_coords[0], screen_coords[1], screen_coords[2],
+                               Color(light * 255, light * 255, light * 255));
+            }
         }
     }
 }
@@ -161,4 +154,35 @@ Mat4 look_at(Vec3 position, Vec3 target, Vec3 up) {
     Vec3 direction = normalize(position - target);
     Vec3 right = normalize(cross(up, direction));
     Mat4 change_of_basis;
+    change_of_basis.m00 = right.x;
+    change_of_basis.m01 = right.y;
+    change_of_basis.m02 = right.z;
+    change_of_basis.m10 = up.x;
+    change_of_basis.m11 = up.y;
+    change_of_basis.m12 = up.z;
+    change_of_basis.m20 = direction.x;
+    change_of_basis.m21 = direction.y;
+    change_of_basis.m22 = direction.z;
+    change_of_basis.m33 = 1;
+    Mat4 camera_shift;
+    camera_shift.m00 = 1;
+    camera_shift.m11 = 1;
+    camera_shift.m22 = 1;
+    camera_shift.m33 = 1;
+    camera_shift.m03 = -position.x;
+    camera_shift.m13 = -position.y;
+    camera_shift.m23 = -position.z;
+    return change_of_basis * camera_shift;
+}
+
+Mat4 translate(Vec3 translation) {
+    Mat4 result;
+    result.m00 = 1;
+    result.m11 = 1;
+    result.m22 = 1;
+    result.m33 = 1;
+    result.m03 = translation.x;
+    result.m13 = translation.x;
+    result.m23 = translation.x;
+    return result;
 }
