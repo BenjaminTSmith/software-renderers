@@ -31,6 +31,7 @@ static void framebuffer_size_callback(GLFWwindow* window, int new_width, int new
     glViewport(x, y, width * scale, height * scale);
 }
 
+static bool render_pause = false;
 static bool first_mouse = true;
 static double last_x = 400;
 static double last_y = 225;
@@ -250,7 +251,7 @@ int main() {
         ImGui::NewFrame();
         {
             ImGui::Begin("Scene Controls");
-
+            ImGui::Checkbox("Pause Rendering", &render_pause);
             ImGui::InputFloat3("Position", position);
             ImGui::SliderFloat("Radius", &radius, 0.1f, 10.0f);
             ImGui::ColorEdit3("Color", color);
@@ -273,7 +274,7 @@ int main() {
             ImGui::Separator();
             ImGui::Text("Spheres in Scene:");
 
-            // Display the list of spheres
+            //list of spheres
             for (int i = 0; i < object_count; ++i) {
                 char label[32];
                 snprintf(label, sizeof(label), "Sphere %d", i);
@@ -282,7 +283,7 @@ int main() {
                 }
             }
 
-            // If a sphere is selected, display its properties for editing
+            //If a sphere is selected, you can edit properties
             if (selected_sphere_index >= 0 && selected_sphere_index < object_count) {
                 ImGui::Separator();
                 ImGui::Text("Edit Sphere %d", selected_sphere_index);
@@ -332,6 +333,18 @@ int main() {
                 }
             }
 
+            //Samples per pixel
+            ImGui::InputInt("Samples Per Pixel", &samples_per_pixel);
+            if (samples_per_pixel < 1){
+                samples_per_pixel = 1;
+            }  
+
+            //Max bounces
+            ImGui::InputInt("Max Bounces", &max_bounces);
+            if (max_bounces < 1){
+                max_bounces = 1;
+            } 
+
             ImGui::End();
         }
 
@@ -339,7 +352,9 @@ int main() {
         
         glClear(GL_COLOR_BUFFER_BIT);
         // render here:
+        if (!render_pause) {
         render(framebuffer, scene, object_count);
+        }
         update_framebuffer(framebuffer);
         // TODO(Ben): Possibly change to an index buffer if need be.
         glDrawArrays(GL_TRIANGLES, 0, 6);

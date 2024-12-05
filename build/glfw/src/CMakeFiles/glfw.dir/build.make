@@ -76,315 +76,315 @@ glfw/src/CMakeFiles/glfw.dir/context.c.obj: glfw/src/CMakeFiles/glfw.dir/include
 glfw/src/CMakeFiles/glfw.dir/context.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/context.c
 glfw/src/CMakeFiles/glfw.dir/context.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object glfw/src/CMakeFiles/glfw.dir/context.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/context.c.obj -MF CMakeFiles\glfw.dir\context.c.obj.d -o CMakeFiles\glfw.dir\context.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\context.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/context.c.obj -MF CMakeFiles\glfw.dir\context.c.obj.d -o CMakeFiles\glfw.dir\context.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\context.c
 
 glfw/src/CMakeFiles/glfw.dir/context.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/context.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\context.c > CMakeFiles\glfw.dir\context.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\context.c > CMakeFiles\glfw.dir\context.c.i
 
 glfw/src/CMakeFiles/glfw.dir/context.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/context.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\context.c -o CMakeFiles\glfw.dir\context.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\context.c -o CMakeFiles\glfw.dir\context.c.s
 
 glfw/src/CMakeFiles/glfw.dir/init.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/init.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/init.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/init.c
 glfw/src/CMakeFiles/glfw.dir/init.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object glfw/src/CMakeFiles/glfw.dir/init.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/init.c.obj -MF CMakeFiles\glfw.dir\init.c.obj.d -o CMakeFiles\glfw.dir\init.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\init.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/init.c.obj -MF CMakeFiles\glfw.dir\init.c.obj.d -o CMakeFiles\glfw.dir\init.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\init.c
 
 glfw/src/CMakeFiles/glfw.dir/init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/init.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\init.c > CMakeFiles\glfw.dir\init.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\init.c > CMakeFiles\glfw.dir\init.c.i
 
 glfw/src/CMakeFiles/glfw.dir/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/init.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\init.c -o CMakeFiles\glfw.dir\init.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\init.c -o CMakeFiles\glfw.dir\init.c.s
 
 glfw/src/CMakeFiles/glfw.dir/input.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/input.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/input.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/input.c
 glfw/src/CMakeFiles/glfw.dir/input.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object glfw/src/CMakeFiles/glfw.dir/input.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/input.c.obj -MF CMakeFiles\glfw.dir\input.c.obj.d -o CMakeFiles\glfw.dir\input.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\input.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/input.c.obj -MF CMakeFiles\glfw.dir\input.c.obj.d -o CMakeFiles\glfw.dir\input.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\input.c
 
 glfw/src/CMakeFiles/glfw.dir/input.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/input.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\input.c > CMakeFiles\glfw.dir\input.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\input.c > CMakeFiles\glfw.dir\input.c.i
 
 glfw/src/CMakeFiles/glfw.dir/input.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/input.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\input.c -o CMakeFiles\glfw.dir\input.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\input.c -o CMakeFiles\glfw.dir\input.c.s
 
 glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/monitor.c
 glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object glfw/src/CMakeFiles/glfw.dir/monitor.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/monitor.c.obj -MF CMakeFiles\glfw.dir\monitor.c.obj.d -o CMakeFiles\glfw.dir\monitor.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\monitor.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/monitor.c.obj -MF CMakeFiles\glfw.dir\monitor.c.obj.d -o CMakeFiles\glfw.dir\monitor.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\monitor.c
 
 glfw/src/CMakeFiles/glfw.dir/monitor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/monitor.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\monitor.c > CMakeFiles\glfw.dir\monitor.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\monitor.c > CMakeFiles\glfw.dir\monitor.c.i
 
 glfw/src/CMakeFiles/glfw.dir/monitor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/monitor.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\monitor.c -o CMakeFiles\glfw.dir\monitor.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\monitor.c -o CMakeFiles\glfw.dir\monitor.c.s
 
 glfw/src/CMakeFiles/glfw.dir/platform.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/platform.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/platform.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/platform.c
 glfw/src/CMakeFiles/glfw.dir/platform.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object glfw/src/CMakeFiles/glfw.dir/platform.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/platform.c.obj -MF CMakeFiles\glfw.dir\platform.c.obj.d -o CMakeFiles\glfw.dir\platform.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\platform.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/platform.c.obj -MF CMakeFiles\glfw.dir\platform.c.obj.d -o CMakeFiles\glfw.dir\platform.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\platform.c
 
 glfw/src/CMakeFiles/glfw.dir/platform.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/platform.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\platform.c > CMakeFiles\glfw.dir\platform.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\platform.c > CMakeFiles\glfw.dir\platform.c.i
 
 glfw/src/CMakeFiles/glfw.dir/platform.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/platform.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\platform.c -o CMakeFiles\glfw.dir\platform.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\platform.c -o CMakeFiles\glfw.dir\platform.c.s
 
 glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/vulkan.c
 glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj -MF CMakeFiles\glfw.dir\vulkan.c.obj.d -o CMakeFiles\glfw.dir\vulkan.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\vulkan.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj -MF CMakeFiles\glfw.dir\vulkan.c.obj.d -o CMakeFiles\glfw.dir\vulkan.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\vulkan.c
 
 glfw/src/CMakeFiles/glfw.dir/vulkan.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/vulkan.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\vulkan.c > CMakeFiles\glfw.dir\vulkan.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\vulkan.c > CMakeFiles\glfw.dir\vulkan.c.i
 
 glfw/src/CMakeFiles/glfw.dir/vulkan.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/vulkan.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\vulkan.c -o CMakeFiles\glfw.dir\vulkan.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\vulkan.c -o CMakeFiles\glfw.dir\vulkan.c.s
 
 glfw/src/CMakeFiles/glfw.dir/window.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/window.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/window.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/window.c
 glfw/src/CMakeFiles/glfw.dir/window.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object glfw/src/CMakeFiles/glfw.dir/window.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/window.c.obj -MF CMakeFiles\glfw.dir\window.c.obj.d -o CMakeFiles\glfw.dir\window.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\window.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/window.c.obj -MF CMakeFiles\glfw.dir\window.c.obj.d -o CMakeFiles\glfw.dir\window.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\window.c
 
 glfw/src/CMakeFiles/glfw.dir/window.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/window.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\window.c > CMakeFiles\glfw.dir\window.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\window.c > CMakeFiles\glfw.dir\window.c.i
 
 glfw/src/CMakeFiles/glfw.dir/window.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/window.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\window.c -o CMakeFiles\glfw.dir\window.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\window.c -o CMakeFiles\glfw.dir\window.c.s
 
 glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/egl_context.c
 glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj -MF CMakeFiles\glfw.dir\egl_context.c.obj.d -o CMakeFiles\glfw.dir\egl_context.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\egl_context.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj -MF CMakeFiles\glfw.dir\egl_context.c.obj.d -o CMakeFiles\glfw.dir\egl_context.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\egl_context.c
 
 glfw/src/CMakeFiles/glfw.dir/egl_context.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/egl_context.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\egl_context.c > CMakeFiles\glfw.dir\egl_context.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\egl_context.c > CMakeFiles\glfw.dir\egl_context.c.i
 
 glfw/src/CMakeFiles/glfw.dir/egl_context.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/egl_context.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\egl_context.c -o CMakeFiles\glfw.dir\egl_context.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\egl_context.c -o CMakeFiles\glfw.dir\egl_context.c.s
 
 glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/osmesa_context.c
 glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj -MF CMakeFiles\glfw.dir\osmesa_context.c.obj.d -o CMakeFiles\glfw.dir\osmesa_context.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\osmesa_context.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj -MF CMakeFiles\glfw.dir\osmesa_context.c.obj.d -o CMakeFiles\glfw.dir\osmesa_context.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\osmesa_context.c
 
 glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/osmesa_context.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\osmesa_context.c > CMakeFiles\glfw.dir\osmesa_context.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\osmesa_context.c > CMakeFiles\glfw.dir\osmesa_context.c.i
 
 glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/osmesa_context.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\osmesa_context.c -o CMakeFiles\glfw.dir\osmesa_context.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\osmesa_context.c -o CMakeFiles\glfw.dir\osmesa_context.c.s
 
 glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/null_init.c
 glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object glfw/src/CMakeFiles/glfw.dir/null_init.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/null_init.c.obj -MF CMakeFiles\glfw.dir\null_init.c.obj.d -o CMakeFiles\glfw.dir\null_init.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_init.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/null_init.c.obj -MF CMakeFiles\glfw.dir\null_init.c.obj.d -o CMakeFiles\glfw.dir\null_init.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_init.c
 
 glfw/src/CMakeFiles/glfw.dir/null_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/null_init.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_init.c > CMakeFiles\glfw.dir\null_init.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_init.c > CMakeFiles\glfw.dir\null_init.c.i
 
 glfw/src/CMakeFiles/glfw.dir/null_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/null_init.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_init.c -o CMakeFiles\glfw.dir\null_init.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_init.c -o CMakeFiles\glfw.dir\null_init.c.s
 
 glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/null_monitor.c
 glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj -MF CMakeFiles\glfw.dir\null_monitor.c.obj.d -o CMakeFiles\glfw.dir\null_monitor.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_monitor.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj -MF CMakeFiles\glfw.dir\null_monitor.c.obj.d -o CMakeFiles\glfw.dir\null_monitor.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_monitor.c
 
 glfw/src/CMakeFiles/glfw.dir/null_monitor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/null_monitor.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_monitor.c > CMakeFiles\glfw.dir\null_monitor.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_monitor.c > CMakeFiles\glfw.dir\null_monitor.c.i
 
 glfw/src/CMakeFiles/glfw.dir/null_monitor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/null_monitor.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_monitor.c -o CMakeFiles\glfw.dir\null_monitor.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_monitor.c -o CMakeFiles\glfw.dir\null_monitor.c.s
 
 glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/null_window.c
 glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object glfw/src/CMakeFiles/glfw.dir/null_window.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/null_window.c.obj -MF CMakeFiles\glfw.dir\null_window.c.obj.d -o CMakeFiles\glfw.dir\null_window.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_window.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/null_window.c.obj -MF CMakeFiles\glfw.dir\null_window.c.obj.d -o CMakeFiles\glfw.dir\null_window.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_window.c
 
 glfw/src/CMakeFiles/glfw.dir/null_window.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/null_window.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_window.c > CMakeFiles\glfw.dir\null_window.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_window.c > CMakeFiles\glfw.dir\null_window.c.i
 
 glfw/src/CMakeFiles/glfw.dir/null_window.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/null_window.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_window.c -o CMakeFiles\glfw.dir\null_window.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_window.c -o CMakeFiles\glfw.dir\null_window.c.s
 
 glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/null_joystick.c
 glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj -MF CMakeFiles\glfw.dir\null_joystick.c.obj.d -o CMakeFiles\glfw.dir\null_joystick.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_joystick.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj -MF CMakeFiles\glfw.dir\null_joystick.c.obj.d -o CMakeFiles\glfw.dir\null_joystick.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_joystick.c
 
 glfw/src/CMakeFiles/glfw.dir/null_joystick.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/null_joystick.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_joystick.c > CMakeFiles\glfw.dir\null_joystick.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_joystick.c > CMakeFiles\glfw.dir\null_joystick.c.i
 
 glfw/src/CMakeFiles/glfw.dir/null_joystick.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/null_joystick.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_joystick.c -o CMakeFiles\glfw.dir\null_joystick.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\null_joystick.c -o CMakeFiles\glfw.dir\null_joystick.c.s
 
 glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/win32_module.c
 glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj -MF CMakeFiles\glfw.dir\win32_module.c.obj.d -o CMakeFiles\glfw.dir\win32_module.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_module.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj -MF CMakeFiles\glfw.dir\win32_module.c.obj.d -o CMakeFiles\glfw.dir\win32_module.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_module.c
 
 glfw/src/CMakeFiles/glfw.dir/win32_module.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_module.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_module.c > CMakeFiles\glfw.dir\win32_module.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_module.c > CMakeFiles\glfw.dir\win32_module.c.i
 
 glfw/src/CMakeFiles/glfw.dir/win32_module.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_module.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_module.c -o CMakeFiles\glfw.dir\win32_module.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_module.c -o CMakeFiles\glfw.dir\win32_module.c.s
 
 glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/win32_time.c
 glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj -MF CMakeFiles\glfw.dir\win32_time.c.obj.d -o CMakeFiles\glfw.dir\win32_time.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_time.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj -MF CMakeFiles\glfw.dir\win32_time.c.obj.d -o CMakeFiles\glfw.dir\win32_time.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_time.c
 
 glfw/src/CMakeFiles/glfw.dir/win32_time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_time.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_time.c > CMakeFiles\glfw.dir\win32_time.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_time.c > CMakeFiles\glfw.dir\win32_time.c.i
 
 glfw/src/CMakeFiles/glfw.dir/win32_time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_time.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_time.c -o CMakeFiles\glfw.dir\win32_time.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_time.c -o CMakeFiles\glfw.dir\win32_time.c.s
 
 glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/win32_thread.c
 glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj -MF CMakeFiles\glfw.dir\win32_thread.c.obj.d -o CMakeFiles\glfw.dir\win32_thread.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_thread.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj -MF CMakeFiles\glfw.dir\win32_thread.c.obj.d -o CMakeFiles\glfw.dir\win32_thread.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_thread.c
 
 glfw/src/CMakeFiles/glfw.dir/win32_thread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_thread.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_thread.c > CMakeFiles\glfw.dir\win32_thread.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_thread.c > CMakeFiles\glfw.dir\win32_thread.c.i
 
 glfw/src/CMakeFiles/glfw.dir/win32_thread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_thread.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_thread.c -o CMakeFiles\glfw.dir\win32_thread.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_thread.c -o CMakeFiles\glfw.dir\win32_thread.c.s
 
 glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/win32_init.c
 glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj -MF CMakeFiles\glfw.dir\win32_init.c.obj.d -o CMakeFiles\glfw.dir\win32_init.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_init.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj -MF CMakeFiles\glfw.dir\win32_init.c.obj.d -o CMakeFiles\glfw.dir\win32_init.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_init.c
 
 glfw/src/CMakeFiles/glfw.dir/win32_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_init.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_init.c > CMakeFiles\glfw.dir\win32_init.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_init.c > CMakeFiles\glfw.dir\win32_init.c.i
 
 glfw/src/CMakeFiles/glfw.dir/win32_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_init.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_init.c -o CMakeFiles\glfw.dir\win32_init.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_init.c -o CMakeFiles\glfw.dir\win32_init.c.s
 
 glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/win32_joystick.c
 glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj -MF CMakeFiles\glfw.dir\win32_joystick.c.obj.d -o CMakeFiles\glfw.dir\win32_joystick.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_joystick.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj -MF CMakeFiles\glfw.dir\win32_joystick.c.obj.d -o CMakeFiles\glfw.dir\win32_joystick.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_joystick.c
 
 glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_joystick.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_joystick.c > CMakeFiles\glfw.dir\win32_joystick.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_joystick.c > CMakeFiles\glfw.dir\win32_joystick.c.i
 
 glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_joystick.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_joystick.c -o CMakeFiles\glfw.dir\win32_joystick.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_joystick.c -o CMakeFiles\glfw.dir\win32_joystick.c.s
 
 glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/win32_monitor.c
 glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj -MF CMakeFiles\glfw.dir\win32_monitor.c.obj.d -o CMakeFiles\glfw.dir\win32_monitor.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_monitor.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj -MF CMakeFiles\glfw.dir\win32_monitor.c.obj.d -o CMakeFiles\glfw.dir\win32_monitor.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_monitor.c
 
 glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_monitor.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_monitor.c > CMakeFiles\glfw.dir\win32_monitor.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_monitor.c > CMakeFiles\glfw.dir\win32_monitor.c.i
 
 glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_monitor.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_monitor.c -o CMakeFiles\glfw.dir\win32_monitor.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_monitor.c -o CMakeFiles\glfw.dir\win32_monitor.c.s
 
 glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/win32_window.c
 glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj -MF CMakeFiles\glfw.dir\win32_window.c.obj.d -o CMakeFiles\glfw.dir\win32_window.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_window.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj -MF CMakeFiles\glfw.dir\win32_window.c.obj.d -o CMakeFiles\glfw.dir\win32_window.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_window.c
 
 glfw/src/CMakeFiles/glfw.dir/win32_window.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/win32_window.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_window.c > CMakeFiles\glfw.dir\win32_window.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_window.c > CMakeFiles\glfw.dir\win32_window.c.i
 
 glfw/src/CMakeFiles/glfw.dir/win32_window.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/win32_window.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_window.c -o CMakeFiles\glfw.dir\win32_window.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\win32_window.c -o CMakeFiles\glfw.dir\win32_window.c.s
 
 glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: glfw/src/CMakeFiles/glfw.dir/flags.make
 glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: glfw/src/CMakeFiles/glfw.dir/includes_C.rsp
 glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C:/Users/james/OneDrive/COPstuff/S_Projects/software-renderers/glfw/src/wgl_context.c
 glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: glfw/src/CMakeFiles/glfw.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj -MF CMakeFiles\glfw.dir\wgl_context.c.obj.d -o CMakeFiles\glfw.dir\wgl_context.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\wgl_context.c
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj -MF CMakeFiles\glfw.dir\wgl_context.c.obj.d -o CMakeFiles\glfw.dir\wgl_context.c.obj -c C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\wgl_context.c
 
 glfw/src/CMakeFiles/glfw.dir/wgl_context.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glfw.dir/wgl_context.c.i"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\wgl_context.c > CMakeFiles\glfw.dir\wgl_context.c.i
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\wgl_context.c > CMakeFiles\glfw.dir\wgl_context.c.i
 
 glfw/src/CMakeFiles/glfw.dir/wgl_context.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glfw.dir/wgl_context.c.s"
-	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\wgl_context.c -o CMakeFiles\glfw.dir\wgl_context.c.s
+	cd /d C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\build\glfw\src && C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\james\OneDrive\COPstuff\S_Projects\software-renderers\glfw\src\wgl_context.c -o CMakeFiles\glfw.dir\wgl_context.c.s
 
 # Object files for target glfw
 glfw_OBJECTS = \

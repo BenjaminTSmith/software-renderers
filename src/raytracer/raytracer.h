@@ -81,6 +81,7 @@ extern Vec3 camera_direction;
 extern Vec3 up;
 extern Vec3 right;
 extern double focal_length;
-extern const int samples_per_pixel;
+extern int samples_per_pixel;
+extern int max_bounces;
 
 #endif // !RENDERER_H

@@ -9,7 +9,8 @@ Vec3 camera_direction = normalize(Vec3(0, 0, 1));
 Vec3 up(0, 1, 0);
 Vec3 right = cross(camera_direction, up);
 double focal_length = 3; // this feels pretty good for now. can tweak if needed
-const int samples_per_pixel = 1;
+int samples_per_pixel = 1;
+int max_bounces = 5;
 
 void render(Color framebuffer[], Object scene[], int object_count) {
     double viewport_height = 2.0;
@@ -44,11 +45,11 @@ void render(Color framebuffer[], Object scene[], int object_count) {
             Vec3 unit_direction = normalize(ray_direction);
             double a = 0.5 * (unit_direction.y + 1.0);
 
-            int max_bounces = 5;
+            int bounce_count = 0;
             Ray ray(camera, ray_direction);
             Vec3 color(((1 - a) + a * 0.5) * 255, ((1 - a) + a * 0.7) * 255, ((1 - a) + a * 1.0) * 255);
             HitRecord hit_record;
-            while (hit_scene(ray, scene, object_count, hit_record) && max_bounces > 0) {
+            while (hit_scene(ray, scene, object_count, hit_record) && bounce_count < max_bounces) {
                 // TODO(Ben): The way we are doing random vector seeding is causing the visual artifacts
                 Vec3 direction = random_vector() + hit_record.normal;
                 /*if (dot(direction, hit_record.normal) < 0) {
@@ -56,7 +57,7 @@ void render(Color framebuffer[], Object scene[], int object_count) {
                 }*/
                 ray = Ray(hit_record.point, direction);
                 color = hit_record.color * color;
-                max_bounces--;
+                bounce_count++;
             }
             color_total = color_total + color;
         }
